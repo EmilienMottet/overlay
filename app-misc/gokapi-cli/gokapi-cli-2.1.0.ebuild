@@ -14,5 +14,5 @@ BDEPEND="app-arch/unzip"
 S="${WORKDIR}"
 
 src_install() {
-    dobin gokapi-cli
+    newbin gokapi-cli-linux_amd64 gokapi-cli
 }

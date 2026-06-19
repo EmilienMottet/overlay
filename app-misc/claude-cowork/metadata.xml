@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <name>Emilien Mottet</name>
+    <email>emilien.mottet@grenoble-inp.org</email>
+  </maintainer>
+  <upstream>
+    <bugs-to>https://github.com/johnzfitch/claude-cowork-linux/issues</bugs-to>
+    <changelog>https://github.com/johnzfitch/claude-cowork-linux/releases</changelog>
+    <remote-id type="github">johnzfitch/claude-cowork-linux</remote-id>
+  </upstream>
+  <use>
+    <flag name="sandbox">Pull in <pkg>sys-apps/bubblewrap</pkg> for Cowork session isolation. The Chromium sandbox is selected at runtime when unprivileged user namespaces are available.</flag>
+  </use>
+  <longdescription lang="en">
+    Linux port of Anthropic's Claude Desktop with Cowork (local agent) mode.
+    It downloads the official macOS Claude Desktop archive from Anthropic's CDN
+    at build time, extracts and patches the bundled app.asar to run on a Linux
+    Electron runtime, and ships it with a bundled Electron 41 plus a launcher.
+    Claude Desktop itself is proprietary Anthropic software; this package only
+    provides the compatibility layer (stubs, patches and launcher) from the
+    johnzfitch/claude-cowork-linux project.
+  </longdescription>
+</pkgmetadata>

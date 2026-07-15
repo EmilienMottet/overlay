@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>emilien.mottet@gmail.com</email>
+		<name>Emilien Mottet</name>
+	</maintainer>
+	<longdescription lang="en">
+		Anthropic's official Claude desktop app for Linux, repackaged from the
+		.deb they publish for Debian/Ubuntu. Provides the Chat, Cowork and
+		Claude Code tabs. Cowork executes its local agent inside a KVM microVM
+		driven by qemu-system-x86_64, virtiofsd and OVMF firmware.
+	</longdescription>
+	<use>
+		<flag name="appindicator">Pull in libayatana-appindicator for the
+			StatusNotifier tray icon</flag>
+		<flag name="cowork">Pull in the KVM/QEMU stack (qemu, virtiofsd, OVMF
+			firmware) required by the Cowork agent, and install the
+			/usr/share/OVMF compatibility symlinks it probes</flag>
+	</use>
+</pkgmetadata>
